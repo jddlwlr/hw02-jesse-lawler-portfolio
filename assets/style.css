@@ -1,0 +1,169 @@
+
+:root {
+    --first: #feffdf;
+    --second: #dde0ab;
+    --third: #97cba9; 
+    --fourth: #668ba4;
+    font-family: 'Mukta', sans-serif; 
+}
+header {
+    background-color: var(--third);
+    border-color: var(--second);
+    border-width: 10px;
+
+
+}
+
+header h1 {
+    display: flex;
+    flex-direction: row;
+    color: var(--first);
+    justify-content: center;
+    padding: 10px;
+    
+
+    
+}
+nav {
+    display: flex;
+    align-content: flex-end;
+    justify-content: flex-end;
+    
+}
+nav ul {
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+    padding-right: 10px;
+    list-style-type: none;
+
+
+    
+}
+
+nav a {
+    display: flex;
+    text-decoration: none;
+    color: var(--first);
+    justify-content: space-between;
+    position: relative;
+    
+    
+}
+
+/* nav hover animation structure */
+nav a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background: var(--first);
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+/* nav hover animation  */
+nav a:hover:before {
+    visibility: visible;
+    width: 100%;
+}
+
+body {
+    margin: 50px;
+
+}
+
+/* flex container */
+.flex-across {
+    display: flex;
+    background-color: var(--second);
+    margin-top: 5px;
+    flex-wrap: wrap;
+    
+    
+}
+
+.flex-box-span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--third);
+    margin: 10px;
+    width: 100%;
+    min-height: 300px;
+    position: relative;     
+   
+}
+.flex-box-span p {
+    display: flex;
+    color: var(--first);
+    justify-content: center;
+    margin: 3px;
+
+}
+
+/* Animate box underlines  */
+.flex-box-span::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background: var(--fourth);
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Animate box underlines  */
+.flex-box-span:hover:after {
+    visibility: visible;
+    width: 100%;
+}
+
+/* individual boxes  */
+.flex-box {
+    display: flex;
+    flex: 1 1;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--third);
+    min-width: 400px;
+    min-height: 200px;
+    margin: 10px;
+
+}
+
+.flex-box p {
+    display: flex;
+    color: var(--first);
+    justify-content: center;
+    margin: 3px;
+
+}
+
+footer {
+ display: flex;
+ background-color: var(--fourth);
+ justify-content: center;
+ margin: 10px
+ width: 100%;
+
+}
+
+footer h2 {
+    color: var(--first);
+
+}
+
+@media screen and (max-width: 768px) {
+    .flex-across{
+        flex-direction: column;
+    
+    }
+    .flex-box-span{
+      order: 2;  
+    }
+}
